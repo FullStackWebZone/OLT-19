@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<section>
+			<h2>Requested Video</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Consequuntur delectus, commodi obcaecati eligendi. Repudiandae eum voluptatum unde vel iusto reiciendis asperiores dignissimos voluptates sapiente molestias recusandae suscipit in, itaque eos quasi nisi, optio id architecto maiores tempora distinctio, doloremque. Deleniti ipsa inventore excepturi ad quae perferendis quam numquam a vel quis, nam voluptatum accusamus ratione sapiente maiores asperiores amet repellat sequi aperiam natus explicabo adipisci, totam odio porro. Optio tempore, nemo qui debitis culpa, fugiat fuga mollitia laborum error, amet dolorum fugit iste exercitationem, a illo voluptates pariatur ipsum. Et explicabo aspernatur non incidunt culpa aliquid natus neque consectetur beatae!</p>
+			<a href="#">
+				<button class="btn">Click Here</button>
+			</a>
+
+			<div class="popup">
+				<h2>Your Content goes here....</h2>
+				<b class="close">X</b>
+			</div>
+		</section>
+
+		<canvas id="my-canvas"></canvas>
+
+		<script src="index.min.js"></script>
+		<script type="text/javascript">
+			let btn = document.querySelector('.btn');
+			let popup = document.querySelector('.popup');
+			let close = document.querySelector('.close');
+			let confe = document.querySelector('#my-canvas');
+			btn.onclick = function(){
+				popup.classList.add('active');
+				confe.classList.add('active');
+			} 
+			close.onclick = function(){
+				popup.classList.remove('active');
+				confe.classList.remove('active');
+			} 
+			var confettiSettings = { target: 'my-canvas' };
+			var confetti = new ConfettiGenerator(confettiSettings);
+			confetti.render();
+
+		</script>
+	</body>
+</html>
